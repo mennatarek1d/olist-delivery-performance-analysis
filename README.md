@@ -28,6 +28,8 @@ Olist's order volume grew in 2018, which should be good news — but late delive
 - Wrote custom DAX measures: % Late Orders, Avg Delivery Days, Avg Handoff Days, Avg Transit Days
 - Interactive dashboard with dynamic Year/Month filtering and drill-down by route, seller, category, and customer state
 - Iterative dashboard design — refined chart types and titles across multiple review passes to keep each visual tied to a specific business question
+<img width="1287" height="782" alt="image" src="https://github.com/user-attachments/assets/9a26534d-6301-4fbc-badd-58dd69a5fed1" />
+
 
 ## Key Numbers (2017 vs 2018)
 
@@ -42,10 +44,23 @@ Olist's order volume grew in 2018, which should be good news — but late delive
 ## What I Found
 
 1. **Volume isn't the cause.** January 2018 had more orders than March 2018 (7,220 vs 7,188) but a much lower late rate (6.43% vs 20.81%). So something else is driving the delays.
-2. **2018 got unpredictable.** In 2017, late orders followed a normal seasonal pattern (one peak, November). In 2018, spikes happened all over the calendar — Feb, May, Aug, and a big one in March (1,496 late orders) — which points to operational problems, not just seasonal demand.
-3. **March's spike traces to one route.** SP → CE hit a 53% late rate that month, caused by one seller's performance dropping sharply. That pushed CE's customer late rate to 51% — the worst of any state.
-4. **In-state delivery works fine. Cross-state doesn't.** SP → SP is only 6.78% late. But SP → AL is 23%, SP → CE is 19%, and PR → BA is 18%. Almost all sellers are based in SP, while the worst-performing states (AL, MA, CE) barely have any local sellers.
-5. **Carrier transit time isn't the main issue.** It only dropped slightly (27 → 25 days), too small to explain the late-rate increase.
+<table>
+  <tr>
+    <td width="50%"><img src="images/sales/sales_2010.png" alt="Sales 2010"></td>
+    <td width="50%"><img src="images/sales/sales_2011.png" alt="Sales 2011"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td width="50%"><img src="images/sales/sales_2010.png" alt="Sales 2010"></td>
+    <td width="50%"><img src="images/sales/sales_2011.png" alt="Sales 2011"></td>
+  </tr>
+</table>
+
+3. **2018 got unpredictable.** In 2017, late orders followed a normal seasonal pattern (one peak, November). In 2018, spikes happened all over the calendar — Feb, May, Aug, and a big one in March (1,496 late orders) — which points to operational problems, not just seasonal demand.
+4. **March's spike traces to one route.** SP → CE hit a 53% late rate that month, caused by one seller's performance dropping sharply. That pushed CE's customer late rate to 51% — the worst of any state.
+5. **In-state delivery works fine. Cross-state doesn't.** SP → SP is only 6.78% late. But SP → AL is 23%, SP → CE is 19%, and PR → BA is 18%. Almost all sellers are based in SP, while the worst-performing states (AL, MA, CE) barely have any local sellers.
+6. **Carrier transit time isn't the main issue.** It only dropped slightly (27 → 25 days), too small to explain the late-rate increase.
 
 ## Recommendations
 
