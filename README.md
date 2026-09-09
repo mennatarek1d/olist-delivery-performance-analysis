@@ -72,6 +72,11 @@ measure — standalone table holding DAX measures: % Late Orders, Avg Delivery D
   </tr>
 </table>
 5. **March's spike traces to one route.** SP → CE hit a 53% late rate that month, caused by one seller's performance dropping sharply. That pushed CE's customer late rate to 51% — the worst of any state.
+<table>
+  <tr>
+    <td width="50%"><img src="images/ce_route.png" alt="late_orders2017"></td>
+  </tr>
+</table>
 6. **In-state delivery works fine. Cross-state doesn't.** SP → SP is only 6.78% late. But SP → AL is 23%, SP → CE is 19%, and PR → BA is 18%. Almost all sellers are based in SP, while the worst-performing states (AL, MA, CE) barely have any local sellers.
 7. **Carrier transit time isn't the main issue.** It only dropped slightly (27 → 25 days), too small to explain the late-rate increase.
 
