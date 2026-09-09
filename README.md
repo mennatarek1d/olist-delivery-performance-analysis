@@ -33,11 +33,17 @@ Star schema built in Power BI:
 
 -**fact_orders — grain**: order/order-item level, with delivery flags (Is Late, Is_Late-alpha), Delay Days, Carrier Transit Days, freight_value, and keys to all dimensions and more
 -**dim_customers**: customer_key, customer_city, customer_state, customer_unique_id, customer_zip_code_prefix.
+
 -**dim_sellers**:seller_key, seller_city, seller_state, seller_zip_code_prefix.
+
 -**dim_geolocation**: geolocation_city, geolocation_state, geolocation_lat/lng, zip_code_prefix.
+
 -**dim_product** :product_id, product_category_name, product_category_name_english.
+
 -**dim_order_state**:key_order_state, order_status.
+
 -**date**:Date, month, year.
+
 -**measure standalone table holding DAX measures**: % Late Orders, Avg Delivery Days, Avg Handoff Days, Avg Transit Days.
 
 <img width="1287" height="782" alt="image" src="https://github.com/user-attachments/assets/9a26534d-6301-4fbc-badd-58dd69a5fed1" />
