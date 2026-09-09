@@ -59,14 +59,6 @@ measure — standalone table holding DAX measures: % Late Orders, Avg Delivery D
 1. **Volume isn't the cause.** January 2018 had more orders than March 2018 (7,220 vs 7,188) but a much lower late rate (6.43% vs 20.81%). So something else is driving the delays.
 <table>
   <tr>
-    <td width="50%"><img src="<img width="1202" height="206" alt="image" src="https://github.com/user-attachments/assets/af1e55a1-4fee-4d0f-9e7e-55a00de659b1" />
-" alt="Sales 2010"></td>
-    <td width="50%"><img src="<img width="1172" height="208" alt="image" src="https://github.com/user-attachments/assets/947b2f3f-b955-493f-a760-a9047a3b163a" />
-" alt="Sales 2011"></td>
-  </tr>
-</table>
-<table>
-  <tr>
     <td width="50%"><img src="images/jan_2018.png" alt="jan_2018"></td>
     <td width="50%"><img src="images/march_2018.png" alt="march_2018"></td>
   </tr>
