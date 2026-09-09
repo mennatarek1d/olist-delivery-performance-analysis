@@ -67,8 +67,8 @@ measure — standalone table holding DAX measures: % Late Orders, Avg Delivery D
 </table>
 <table>
   <tr>
-    <td width="50%"><img src="images/sales/sales_2010.png" alt="Sales 2010"></td>
-    <td width="50%"><img src="images/sales/sales_2011.png" alt="Sales 2011"></td>
+    <td width="50%"><img src="images/jan_2018.png" alt="jan_2018"></td>
+    <td width="50%"><img src="images/march_2018.png" alt="march_2018"></td>
   </tr>
 </table>
 
