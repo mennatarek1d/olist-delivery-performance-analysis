@@ -2,17 +2,15 @@
 
 Why did late deliveries get worse in 2018, even though the business grew? This project finds out — and shows where to fix it first.
 
-## Summary
+## Executive Summary
 
-Orders grew from ~40K (2017) to ~59K (2018), which is good. But late deliveries also grew — from 6.22% to 9.13% — and negative reviews nearly doubled (~4K → ~9K). Growth alone doesn't explain this: some low-volume months performed worse than high-volume ones. The real problem is concentrated in specific routes and sellers, mostly shipments from São Paulo into distant states like AL, MA, and CE.
+Using MySQL and Power BI, I analyzed 2017–2018 Olist marketplace data to uncover the drivers of late deliveries, seasonal delay patterns, and the routes and sellers most responsible for delivery risk. Order volume grew from ~40K to ~59K between 2017 and 2018, but the late-order rate rose from 6.22% to 9.13% and negative reviews nearly doubled from ~4K to ~9K. Volume growth alone does not explain the decline — several low-volume months performed far worse than high-volume ones — pointing instead to route- and seller-specific breakdowns, concentrated in shipments from São Paulo sellers into distant states such as AL, MA, and CE.
 
 ## Business Problem
 
-Olist's order volume grew in 2018, which should be good news — but late deliveries and negative reviews grew even faster. The business needed to know:
+The business needs to understand why delivery performance declined in 2018 even as the platform grew, and where to focus operational improvements first. Late orders and negative reviews both increased year-over-year, and the drivers behind that decline were not yet understood. This analysis answers three questions:
 
-1. Is the rise in late deliveries just a side effect of growth, or a separate problem?
-2. Which months, routes, sellers, and states are driving it?
-3. What's the most direct fix to reduce delivery risk going forward?
+Is the rise in late deliveries explained by order volume growth, or by something else? Which months, routes, sellers, and customer states are most responsible for late deliveries? What operational recommendation would most directly reduce delivery risk going forward?
 
 ## Technical Skills Demonstrated
 
@@ -24,11 +22,26 @@ Olist's order volume grew in 2018, which should be good news — but late delive
 - Aggregation with `GROUP BY` / `HAVING` to build review-scoring and delivery-flag tables
 
 **Power BI / DAX**
-- Built a star-schema data model (1 fact table + 6 dimension tables + a dedicated measures table)
-- Wrote custom DAX measures: % Late Orders, Avg Delivery Days, Avg Handoff Days, Avg Transit Days
-- Interactive dashboard with dynamic Year/Month filtering and drill-down by route, seller, category, and customer state
-- Iterative dashboard design — refined chart types and titles across multiple review passes to keep each visual tied to a specific business question
+-Star-schema data model: fact_orders connected to `dim_customers`, `dim_sellers`, `dim_product`, `dim_geolocation`, `dim_order_state`, and `date`
+-Custom measure table with DAX measures including % Late Orders, Avg Delivery Days, Avg Handoff Days, and Avg Transit Days
+-KPI cards, dynamic Year/Month filtering, and drill-down visuals (routes, seller cities, product categories, customer states)
+-Iterative dashboard design based on review cycles — refining chart types, labels, and titles to keep every visual tied to a specific business question
+
+**Data Model**
+
+Star schema built in Power BI:
+
+fact_orders — grain: order/order-item level, with delivery flags (Is Late, Is_Late-alpha), Delay Days, Carrier Transit Days, freight_value, and keys to all dimensions and more..
+dim_customers — customer_key, customer_city, customer_state, customer_unique_id, customer_zip_code_prefix
+dim_sellers — seller_key, seller_city, seller_state, seller_zip_code_prefix
+dim_geolocation — geolocation_city, geolocation_state, geolocation_lat/lng, zip_code_prefix
+dim_product — product_id, product_category_name, product_category_name_english
+dim_order_state — key_order_state, order_status
+date — Date, month, year
+measure — standalone table holding DAX measures: % Late Orders, Avg Delivery Days, Avg Handoff Days, Avg Transit Days
+
 <img width="1287" height="782" alt="image" src="https://github.com/user-attachments/assets/9a26534d-6301-4fbc-badd-58dd69a5fed1" />
+
 
 
 ## Key Numbers (2017 vs 2018)
@@ -46,8 +59,10 @@ Olist's order volume grew in 2018, which should be good news — but late delive
 1. **Volume isn't the cause.** January 2018 had more orders than March 2018 (7,220 vs 7,188) but a much lower late rate (6.43% vs 20.81%). So something else is driving the delays.
 <table>
   <tr>
-    <td width="50%"><img src="images/sales/sales_2010.png" alt="Sales 2010"></td>
-    <td width="50%"><img src="images/sales/sales_2011.png" alt="Sales 2011"></td>
+    <td width="50%"><img src="<img width="1202" height="206" alt="image" src="https://github.com/user-attachments/assets/af1e55a1-4fee-4d0f-9e7e-55a00de659b1" />
+" alt="Sales 2010"></td>
+    <td width="50%"><img src="<img width="1172" height="208" alt="image" src="https://github.com/user-attachments/assets/947b2f3f-b955-493f-a760-a9047a3b163a" />
+" alt="Sales 2011"></td>
   </tr>
 </table>
 <table>
