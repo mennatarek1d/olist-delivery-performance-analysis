@@ -65,9 +65,15 @@ measure — standalone table holding DAX measures: % Late Orders, Avg Delivery D
 </table>
 
 3. **2018 got unpredictable.** In 2017, late orders followed a normal seasonal pattern (one peak, November). In 2018, spikes happened all over the calendar — Feb, May, Aug, and a big one in March (1,496 late orders) — which points to operational problems, not just seasonal demand.
-4. **March's spike traces to one route.** SP → CE hit a 53% late rate that month, caused by one seller's performance dropping sharply. That pushed CE's customer late rate to 51% — the worst of any state.
-5. **In-state delivery works fine. Cross-state doesn't.** SP → SP is only 6.78% late. But SP → AL is 23%, SP → CE is 19%, and PR → BA is 18%. Almost all sellers are based in SP, while the worst-performing states (AL, MA, CE) barely have any local sellers.
-6. **Carrier transit time isn't the main issue.** It only dropped slightly (27 → 25 days), too small to explain the late-rate increase.
+<table>
+  <tr>
+    <td width="50%"><img src="images/late_orders_2017.png" alt="late_orders2017"></td>
+    <td width="50%"><img src="images/late_orders_2018.png" alt="late_orders2018"></td>
+  </tr>
+</table>
+5. **March's spike traces to one route.** SP → CE hit a 53% late rate that month, caused by one seller's performance dropping sharply. That pushed CE's customer late rate to 51% — the worst of any state.
+6. **In-state delivery works fine. Cross-state doesn't.** SP → SP is only 6.78% late. But SP → AL is 23%, SP → CE is 19%, and PR → BA is 18%. Almost all sellers are based in SP, while the worst-performing states (AL, MA, CE) barely have any local sellers.
+7. **Carrier transit time isn't the main issue.** It only dropped slightly (27 → 25 days), too small to explain the late-rate increase.
 
 ## Recommendations
 
