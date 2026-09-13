@@ -60,7 +60,7 @@ Star schema built in Power BI:
 | Customers per seller | 23.21 | 23.87 | +0.66 |
 | Avg carrier transit days | 27 | 25 | -2 days |
 
-## What I Found
+## Key Insights
 
 1. **Volume isn't the cause.** January 2018 had more orders than March 2018 (7,220 vs 7,188) but a much lower late rate (6.43% vs 20.81%). So something else is driving the delays.
 <table>
@@ -109,4 +109,4 @@ Star schema built in Power BI:
 ```
 
 ## Author
-[Your name]
+[Menna_Tarek]
